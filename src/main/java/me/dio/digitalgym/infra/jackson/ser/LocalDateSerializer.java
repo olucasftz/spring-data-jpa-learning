@@ -1,4 +1,22 @@
 package me.dio.digitalgym.infra.jackson.ser;
 
-public class LocalDateSerializer {
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import me.dio.digitalgym.infra.utils.JavaTimeUtils;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
+
+import java.io.IOException;
+import java.time.LocalDate;
+
+public class LocalDateSerializer extends StdSerializer<LocalDate> {
+    private static final long serialVersionUID = -2718386750062666481L;
+
+    public LocalDateSerializer() {
+        super(LocalDate.class);
+    }
+
+    @Override
+    public void serialize(final LocalDate value, final JsonGenerator generator, final SerializerProvider provider) throws IOException {
+        generator.writeString(value.format(JavaTimeUtils.LOCAL_DATE_FORMATTER));
+    }
 }
