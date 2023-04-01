@@ -13,7 +13,7 @@ public interface IStudentService {
 
     Student get(Long id);
 
-    List<Student> getAll(String birthDate);
+    List<Student> getAll();
 
     Student update(Long id, StudentUpdateForm formUpdate);
 
