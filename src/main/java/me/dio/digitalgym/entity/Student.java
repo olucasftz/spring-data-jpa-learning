@@ -28,7 +28,6 @@ public class Student {
     private String cpf;
     private String neighborhood;
     private LocalDate birthDate;
-
     @OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<PhysicalEvaluation> evaluations = new ArrayList<>();
