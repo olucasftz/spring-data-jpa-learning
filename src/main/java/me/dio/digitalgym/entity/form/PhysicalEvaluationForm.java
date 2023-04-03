@@ -4,12 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class PhysicalEvaluationForm {
+
+    @Positive(message = "the student's id need be positive")
     private Long studentId;
+
+    @NotNull(message = "Fill out the field correctly.")
+    @Positive(message = "the student's id need be positive")
     private double weight;
+
+    @NotNull(message = "Fill out the field correctly.")
+    @Positive(message = "the student's id need be positive")
     private double height;
 
 }

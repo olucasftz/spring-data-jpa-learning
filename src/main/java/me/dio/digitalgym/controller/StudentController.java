@@ -8,6 +8,7 @@ import me.dio.digitalgym.service.impl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,7 @@ public class StudentController {
     }
 
     @PostMapping
-    public Student create(@RequestBody StudentForm form) {
+    public Student create(@Valid @RequestBody StudentForm form) {
         return service.create(form);
     }
 
@@ -31,6 +32,4 @@ public class StudentController {
     public List<PhysicalEvaluation> getAllPhysicalEvaluationId(@PathVariable Long id) {
         return service.getAllPhysicalEvaluationId(id);
     }
-
-
 }

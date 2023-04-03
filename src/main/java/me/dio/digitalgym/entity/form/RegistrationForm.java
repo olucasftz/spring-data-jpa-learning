@@ -12,5 +12,7 @@ import javax.validation.constraints.Positive;
 @AllArgsConstructor
 public class RegistrationForm {
 
+    @NotNull(message = "Fill out the field correctly.")
+    @Positive(message = "the student's id need be positive")
     private Long studentID;
 }
