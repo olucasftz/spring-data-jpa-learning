@@ -9,9 +9,5 @@ public interface IRegistrationService {
 
     Registration create(RegistrationForm form);
 
-    Registration get(Long id);
-
     List<Registration> getAll (String neighborhood);
-
-    void delete(Long id);
 }

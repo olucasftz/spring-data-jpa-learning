@@ -11,14 +11,11 @@ public interface IStudentService {
 
     Student create(StudentForm form);
 
-    Student get(Long id);
-
     List<Student> getAll();
 
     Student update(Long id, StudentUpdateForm formUpdate);
 
-    void delete(Long id);
-
     List<PhysicalEvaluation> getAllPhysicalEvaluationId(Long id);
+
 
 }

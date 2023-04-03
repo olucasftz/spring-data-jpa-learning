@@ -30,24 +30,10 @@ public class PhysicalEvaluationServiceImpl implements IPhysicalEvaluationService
         physicalEvaluation.setHeight(form.getHeight());
         return physicalEvaluationRepository.save(physicalEvaluation);
     }
-
-    @Override
-    public PhysicalEvaluation get(Long id) {
-        return null;
-    }
-
+    
     @Override
     public List<PhysicalEvaluation> getAll() {
         return null;
     }
 
-    @Override
-    public PhysicalEvaluation update(Long id, PhysicalEvaluationUpdateForm FormUpdate) {
-        return null;
-    }
-
-    @Override
-    public void delete(Long id) {
-
-    }
 }

@@ -10,11 +10,6 @@ public interface IPhysicalEvaluationService {
 
     PhysicalEvaluation create(PhysicalEvaluationForm form);
 
-    PhysicalEvaluation get(Long id);
-
     List<PhysicalEvaluation> getAll();
 
-    PhysicalEvaluation update(Long id, PhysicalEvaluationUpdateForm FormUpdate);
-
-    void delete(Long id);
 }

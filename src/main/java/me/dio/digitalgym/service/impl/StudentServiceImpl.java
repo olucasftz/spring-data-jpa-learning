@@ -8,6 +8,7 @@ import me.dio.digitalgym.repository.StudentRepository;
 import me.dio.digitalgym.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -25,12 +26,8 @@ public class StudentServiceImpl implements IStudentService {
         student.setCpf(form.getCpf());
         student.setNeighborhood(form.getNeighborhood());
         student.setBirthDate(form.getBirthDate());
-        return repository.save(student);
-    }
 
-    @Override
-    public Student get(Long id) {
-        return null;
+        return repository.save(student);
     }
 
     @Override
@@ -41,11 +38,6 @@ public class StudentServiceImpl implements IStudentService {
     @Override
     public Student update(Long id, StudentUpdateForm formUpdate) {
         return null;
-    }
-
-    @Override
-    public void delete(Long id) {
-
     }
 
     @Override

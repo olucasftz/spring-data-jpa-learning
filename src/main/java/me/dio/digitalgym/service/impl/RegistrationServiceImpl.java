@@ -30,10 +30,6 @@ public class RegistrationServiceImpl implements IRegistrationService {
         return registrationRepository.save(registration);
     }
 
-    @Override
-    public Registration get(Long id) {
-        return null;
-    }
 
     @Override
     public List<Registration> getAll(String neighborhood) {
@@ -45,8 +41,4 @@ public class RegistrationServiceImpl implements IRegistrationService {
         }
     }
 
-    @Override
-    public void delete(Long id) {
-
-    }
 }
