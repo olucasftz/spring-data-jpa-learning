@@ -1,5 +1,7 @@
 package me.dio.digitalgym.controller;
 
+
+import me.dio.digitalgym.entity.PhysicalEvaluation;
 import me.dio.digitalgym.entity.Student;
 import me.dio.digitalgym.entity.form.StudentForm;
 import me.dio.digitalgym.service.impl.StudentServiceImpl;
@@ -24,5 +26,11 @@ public class StudentController {
     public Student create(@RequestBody StudentForm form) {
         return service.create(form);
     }
+
+    @GetMapping("evaluations/{id}")
+    public List<PhysicalEvaluation> getAllPhysicalEvaluationId(@PathVariable Long id) {
+        return service.getAllPhysicalEvaluationId(id);
+    }
+
 
 }

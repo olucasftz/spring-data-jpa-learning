@@ -50,6 +50,8 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public List<PhysicalEvaluation> getAllPhysicalEvaluationId(Long id) {
-        return null;
+        Student student = repository.findById(id).get();
+        return student.getEvaluations();
     }
+
 }
